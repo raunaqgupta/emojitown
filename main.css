@@ -1,0 +1,37 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  transform: rotateX(60deg) rotateY(0deg) rotateZ(45deg);
+}
+
+.tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  background-color: #00781f;
+  border: 1px solid #00681b;
+  transition: background-color 0.25s;
+}
+
+.tile:hover {
+  cursor: pointer;
+  background-color: #00e33b;
+}
+
+.tile > .emoji {
+  transform: rotateX(0deg) rotateY(0deg) rotateZ(-45deg) scaleY(2)
+    translateY(-10px);
+  font-size: 42px;
+}
