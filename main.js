@@ -33,3 +33,25 @@ do {
   document.getElementsByClassName('container')[0].appendChild(block);
   i++;
 } while (i < 36);
+
+document
+  .getElementsByClassName('container')[0]
+  .addEventListener('click', event => {
+    clickTarget(event.target);
+  });
+
+function clickTarget(element) {
+  changeTile(element);
+}
+
+function changeTile(element) {
+  var newEmoji = validEmojis[Math.floor(Math.random() * validEmojis.length)];
+  var moji;
+  if (element.className === 'tile') {
+    moji = element.childNodes[0];
+  } else if (element.className === 'emoji') {
+    moji = element;
+  }
+
+  moji.innerHTML = newEmoji;
+}

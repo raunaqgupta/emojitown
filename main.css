@@ -5,6 +5,7 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  background-color: #ffea00;
 }
 
 .container {
@@ -34,4 +35,9 @@ body {
   transform: rotateX(0deg) rotateY(0deg) rotateZ(-45deg) scaleY(2)
     translateY(-10px);
   font-size: 42px;
+  -moz-user-select: none;
+}
+
+.tile > .emoji:active {
+  font-size: 36px;
 }
