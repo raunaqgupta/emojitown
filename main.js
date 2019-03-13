@@ -41,17 +41,16 @@ document
   });
 
 function clickTarget(element) {
-  changeTile(element);
-}
-
-function changeTile(element) {
-  var newEmoji = validEmojis[Math.floor(Math.random() * validEmojis.length)];
   var moji;
   if (element.className === 'tile') {
     moji = element.childNodes[0];
   } else if (element.className === 'emoji') {
     moji = element;
   }
+  changeTile(moji);
+}
 
+function changeTile(moji) {
+  var newEmoji = validEmojis[Math.floor(Math.random() * validEmojis.length)];
   moji.innerHTML = newEmoji;
 }
