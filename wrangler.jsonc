@@ -5,6 +5,7 @@
   "assets": {
     "directory": "./public/"
   },
+  "previews": {},
   "routes": [
     {
       "pattern": "emojitown.raunaqgupta.com",
