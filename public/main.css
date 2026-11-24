@@ -60,3 +60,29 @@ body {
 .tile > .emoji:active {
   font-size: 36px;
 }
+
+/* The attribution under the page: centred, 16px off the bottom (and clear of a phone's home
+   bar), small and grey, with the name underlined as a link. */
+.site-footer {
+  position: relative;
+  padding: 16px 16px calc(16px + env(safe-area-inset-bottom, 0px));
+  color: #666666;
+  font: 400 12px/16px system-ui, sans-serif;
+  text-align: center;
+}
+
+.site-footer a {
+  color: inherit;
+  text-decoration: underline 1px;
+  text-underline-position: from-font;
+}
+
+.site-footer a:hover {
+  color: #000000;
+}
+
+.site-footer a:focus-visible {
+  outline: 2px solid #000000;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
